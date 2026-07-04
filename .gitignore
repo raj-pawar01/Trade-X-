@@ -1,0 +1,21 @@
+# Root level gitignore to cover all subdirectories
+node_modules/
+dist/
+dist-ssr/
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# IDE files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,131 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footerend a {
+  color: black;
+  opacity: 0.6;
+
+}
+
+.aboutpara {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.table{
+  border-spacing: 0;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.table-row{
+      display: table-row-group;
+      border: whitesmoke;
+}
+
+.free-tag{
+      text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 500;
+        color: #fff;
+        background: #4caf50;
+        padding: 4px 10px;
+        border-radius: 2px;
+}
+
+.charges p{
+ margin-top:1.3rem;
+ font-size: 13px;
+ opacity: 0.95;
+ line-height: 1.5rem;
+}
+.charges li {
+  margin-top: 1.3rem;
+  font-size: 13px;
+  opacity: 0.95;
+  line-height: 0.9rem;
+}
+
+.charges h6{
+  font-size: 17px;
+  opacity: 0.8;
+
+}
+
+
+/* AccountOpeningUI.css */
+
+.account-box {
+  background: #ffffff;
+}
+
+.header-row {
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.icon-box {
+  width: 32px;
+  height: 32px;
+  background: #eef6ff;
+  color: #1d7cff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.content-area {
+  background: #ffffff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.blue-link {
+  color: #1d7cff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.blue-link:hover {
+
+  color: black;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* underline base */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0d6efd;
+  /* Bootstrap primary */
+  transition: width 0.3s ease;
+}
+
+/* hover effect */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* active tab underline */
+.nav-link.custom-active::after {
+  width: 100%;
+}

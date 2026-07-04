@@ -38,12 +38,16 @@ const OrderModal = ({ isOpen, onClose, stock, initialMode = "BUY" }) => {
     try {
       setLoading(true);
       setError("");
+      
+      const token = localStorage.getItem("token");
+      const config = token ? { headers: { Authorization: `Bearer ${token}` } } : {};
+
       await axios.post("http://localhost:8080/newOrder", {
         name: stock.name,
         qty: Number(qty),
         price: Number(price),
         mode: mode.toUpperCase(),
-      });
+      }, config);
 
       setSuccess(true);
       setTimeout(() => {

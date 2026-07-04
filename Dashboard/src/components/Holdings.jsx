@@ -8,8 +8,11 @@ const Holdings = () => {
   const { getLiveStock } = useStockPrices();
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    const config = token ? { headers: { Authorization: `Bearer ${token}` } } : {};
+
     axios
-      .get("http://localhost:8080/allHoldings")
+      .get("http://localhost:8080/allHoldings", config)
       .then((res) => {
         setAllHoldings(res.data);
       })

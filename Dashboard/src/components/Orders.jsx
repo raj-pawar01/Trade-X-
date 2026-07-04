@@ -8,8 +8,11 @@ const Orders = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    const config = token ? { headers: { Authorization: `Bearer ${token}` } } : {};
+
     axios
-      .get("http://localhost:8080/allOrders")
+      .get("http://localhost:8080/allOrders", config)
       .then((res) => {
         setOrders(res.data);
       })
